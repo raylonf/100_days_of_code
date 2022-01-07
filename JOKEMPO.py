@@ -26,8 +26,6 @@ while resp != 'N':
         print('')
         while jogos != 5:
             if resp == 'S':
-                
-
                 J1 = input('Qual você escolhe? (Pedra/ Papel/ Tesoura) ').capitalize()
                 print('')
                 Jpc = jogar_pc(random.randint(0, 2))
