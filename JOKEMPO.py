@@ -1,5 +1,6 @@
 import random
 from time import sleep
+import os
 
 jogos = 0
 vit_j1 = 0
@@ -26,9 +27,10 @@ while resp != 'N':
         print('')
         while jogos != 5:
             if resp == 'S':
-                J1 = input('Qual você escolhe? (Pedra/ Papel/ Tesoura) ').capitalize()
+                J1 = input('Qual você escolhe? (Pedra/ Papel/ Tesoura) ').capitalize()                
                 print('')
                 Jpc = jogar_pc(random.randint(0, 2))
+                os.system('cls') or None
                 sleep(0.5)
                 print('JO')
                 sleep(0.3)

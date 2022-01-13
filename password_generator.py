@@ -31,7 +31,7 @@ class PasswordGenerator:
         return passwd
     
     
-print('---------WELCOME PASSWORD GENERATOR ----------')
+print('\n---------WELCOME PASSWORD GENERATOR ----------')
 print('')
 print('')
 x = int(input('How many letters you want in your password?\n'))

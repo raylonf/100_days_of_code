@@ -1,5 +1,6 @@
 import os
 import random
+from lista_palavras import nomeslista
 
 d = ('\033[m',        # 0 - sem cores
      '\033[0;30;41m', # 1 - vermelho
@@ -17,8 +18,8 @@ def linha(n, cor = 0):
     print(d[0], end='')
 
 
-nomes = ['bike', 'bicicleta', 'moto', 'carro', 'escola', 'garagem', 'apartamento']
-nome_random = nomes[random.randint(0, len(nomes)-1)]
+nomes = nomeslista
+nome_random = nomes[random.randint(0, len(nomes)-1)].lower()
 forca = [''' ___________.._______
 | .__________))______|
 | | / /      ||
@@ -223,8 +224,9 @@ while m != z :
                 if y == nome_random[c]:
                     x.insert(c, y)
                     del x[c + 1]
-                    
+        print(errorletters)            
     if '_' not in x:
+        print(f'\nThe word is {nome_random}\n')
         linha('      ******    Congratulations    ******      ', 5)
         break
            
