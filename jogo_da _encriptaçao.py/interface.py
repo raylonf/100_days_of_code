@@ -10,7 +10,7 @@ layout = [[sg.Text('Type your message:'), sg.Input(key='message', size=(51,2))],
           [sg.Text('Type the shift number:'), sg.Input(key= 'shift', size=(10,2))],
           [sg.Button('Encode'), sg.Button('Decode')],
           [sg.Text(size=(40,1), key= 'resp')],
-          #[sg.Output(size=(70,3), key='-OUTPUT-')],
+          [sg.Output(size=(70,3), key='-OUTPUT-')],
           [sg.Button('Exit')]  
 ]
 
@@ -31,16 +31,16 @@ while True:
         if events == 'Encode':
             #values['resp'] = "Here's the encoded result:"
             values['-OUTPUT-'] = encrypt(message= values['message'], shift= int(values['shift']))
-            janela['resp'].update(f"Here's the encoded result: {values['-OUTPUT-']}", text_color = 'red')
-            #print(values['resp'])
+            janela['resp'].update(f"Here's the encoded result: ", text_color = 'Blue')
+            print(values['-OUTPUT-'])
             #print(values['-OUTPUT-'] )
             
         elif events == 'Decode':
             #values['resp'] = "Here's the decoded result:"
             values['-OUTPUT-'] = decrypt(message= values['message'], shift= int(values['shift']))
-            janela['resp'].update(f"Here's the decoded result: {values['-OUTPUT-']}", text_color = 'red')
+            janela['resp'].update(f"Here's the decoded result: ", text_color = 'red')
             #print(values['resp'])
-            #print(values['-OUTPUT-'] )
+            print(values['-OUTPUT-'] )
             
       
        
