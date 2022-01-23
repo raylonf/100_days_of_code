@@ -19,6 +19,7 @@
 
 import random
 
+
 def start_hand(list):
     for c in range(2):
         c = random.choice(cards)
@@ -91,27 +92,27 @@ while start == 'y':
     print(f"Computer final hand: {dealer_hand}, current score: {current_score(dealer_hand)} ")
     
     if current_score(your_hand) == current_score(dealer_hand):
-        print('Draw ')
+        print('Draw 😐')
 
     elif blackjack == True and blackjack_dealer == False:
-        print('Win with BlackJack!!')
+        print('Win with BlackJack!! 😎')
         blackjack = False
         
     elif blackjack_dealer == True and blackjack == False:
-        print('You lose with BlackJack!!')
+        print('You lose with BlackJack!! 😮')
         blackjack_dealer = False
         
     elif current_score(your_hand) <= 21 and current_score(your_hand) > current_score(dealer_hand) :
-        print('You win')
+        print('You win 😁')
     
     elif current_score(your_hand) > 21 :
         print('You went over. You lose ')
     
     elif current_score(dealer_hand) > 21 and current_score(your_hand) <= 21:
-        print('You win ')
+        print('You win 😁')
         
     else:
-        print('You lose ')
+        print('You lose 😞')
     
     start = input("\nDo you want to play a game of BlackJack? Type 'y' or 'n': ")
     
