@@ -3,6 +3,7 @@ import random
 import string
 import json
 import os
+
 class PasswordGenerator:
     
     def __init__(self): 
