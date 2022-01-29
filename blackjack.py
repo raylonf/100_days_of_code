@@ -18,6 +18,7 @@
 ## The computer is the dealer.
 
 import random
+import os
 
 
 def start_hand(list):
@@ -106,7 +107,7 @@ while start == 'y':
         print('You win 😁')
     
     elif current_score(your_hand) > 21 :
-        print('You went over. You lose ')
+        print('You went over. You lose 😞 ')
     
     elif current_score(dealer_hand) > 21 and current_score(your_hand) <= 21:
         print('You win 😁')
@@ -115,10 +116,4 @@ while start == 'y':
         print('You lose 😞')
     
     start = input("\nDo you want to play a game of BlackJack? Type 'y' or 'n': ")
-    
-
-
-
-
-
-
+    os.system('cls') or None
