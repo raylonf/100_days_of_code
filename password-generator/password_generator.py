@@ -33,9 +33,9 @@ class PasswordGenerator:
         #self.login[site] = email, self.password()
                
     def load(self):
-        if not os.path.exists('generator_pass.txt'):
+        if not os.path.exists('../generator_pass.txt'):
             return
-        with open ('generator_pass.txt', 'r') as f:
+        with open ('../generator_pass.txt', 'r') as f:
             self.login = json.load(f)   
             
            
@@ -44,7 +44,7 @@ class PasswordGenerator:
         x = {}        
         x[site] = email, senha
         #print('Saving ....')
-        with open ('generator_pass.txt', 'a') as f:            
+        with open ('../generator_pass.txt', 'a') as f:
             json.dump(x,  f)            
         #print('Saved!') 
     
