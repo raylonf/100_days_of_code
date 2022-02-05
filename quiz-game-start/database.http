@@ -1,0 +1,17 @@
+https://opentdb.com/api.php?amount=30
+
+###
+
+https://opentdb.com/api.php?amount=30&type=boolean
+
+###
+https://veiculos.fipe.org.br/api/selectTabelaReferenciacarroConsultarPorCodigoFip/
+
+###
+POST  https://veiculos.fipe.org.br/api/veiculos//ConsultarMarcas http/1.1
+content-type: application/json
+
+{
+    "codigoTabelaReferencia": 281,
+    "codigoTipoVeiculo": 1
+}

@@ -50,12 +50,12 @@ def check_coffee(coffee):
         return True
 
 def check_payment(coffee):
+    print('Please insert coins: ')
+    payment = int(input('How many quarters: ')) * 0.25
+    payment += int(input('How many dimes: ')) * 0.10
+    payment += int(input('How many nickles: ')) * 0.05
+    payment += int(input('How many pennies: ')) * 0.01
     
-    quarter = int(input('How many quarters: '))
-    dimes = int(input('How many dimes: '))
-    nickles = int(input('How many nickles: '))
-    pennies = int(input('How many pennies: '))
-    payment = (quarter * 0.25) + (dimes * 0.10) + (nickles * 0.05) + (pennies * 0.01)
     
     if payment < MENU[coffee]['cost']:
         print("Sorry that's not enough money. Money refunded.")
@@ -114,6 +114,8 @@ while True:
         resources['coffee'] += c
         stock()
         
+    elif drink == 'off':
+        break
         
     else:
         print('Invalid option!')
