@@ -31,6 +31,7 @@ class Snake(Turtle):
 
         self.head.fd(10)
 
+
     def up(self):
         if self.direction != 'down':
             self.head.seth(90)
@@ -61,6 +62,6 @@ class Snake(Turtle):
 
     #Check not collision on tail
     def check_not_collision(self):
-        for s in range(2, len(self.snake_body)):
+        for s in range(1, len(self.snake_body)):
             if self.head.distance(self.snake_body[s]) < 5:
                 return False

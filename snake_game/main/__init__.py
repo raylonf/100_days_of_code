@@ -23,7 +23,7 @@ screen.onkey(snake.right, 'Right')
 while True:
     screen.update()
     score.print_scoreboard()
-    time.sleep(0.05)
+    time.sleep(0.1)
     snake.move()
 
     if snake.head.distance(food) < 5:

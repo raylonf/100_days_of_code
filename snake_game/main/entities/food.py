@@ -2,7 +2,7 @@ from turtle import Turtle
 import random
 
 LIST_RANDOM = []
-for c in range(-290, 290, 10):
+for c in range(-280, 280, 10):
     LIST_RANDOM.append(c)
 
 
