@@ -1,6 +1,5 @@
 from turtle import Turtle
 import random
-import time
 
 COLORS = ('white', 'pink', 'yellow', 'brown', 'green', 'orange', 'red')
 INITIAL_POSITION = (random.randint(-260, 260))
@@ -16,8 +15,6 @@ class Car(Turtle):
         self.shapesize(stretch_wid=1, stretch_len=2)
         self.setposition(300, random.randint(-240, 260))
         self.moviment = 5
-
-
 
     def move(self):
         new_mov_x = self.xcor() + self.moviment

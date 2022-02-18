@@ -32,12 +32,12 @@ while True:
         score.make_point()
 
     if snake.head.xcor() > 290 or snake.head.xcor() < -290 or snake.head.ycor() > 290 or snake.head.ycor() < -290:
-        gameover = GameOver()
-        break
+        score.reset()
+        snake.restart()
 
     if snake.check_not_collision() == False:
-        gameover = GameOver()
-        break
+        score.reset()
+        snake.restart()
 
 
 screen.exitonclick()

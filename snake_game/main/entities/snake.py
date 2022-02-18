@@ -65,3 +65,10 @@ class Snake(Turtle):
         for s in range(1, len(self.snake_body)):
             if self.head.distance(self.snake_body[s]) < 5:
                 return False
+
+    def restart(self):
+        for s in self.snake_body:
+            s.goto(1000, 1000)
+        self.snake_body.clear()
+        self.create_snake()
+        self.head = self.snake_body[0]

@@ -1,4 +1,5 @@
 from turtle import Turtle
+import os
 
 ALLIGN = 'center'
 FONT = ('Currier', 12, 'italic')
@@ -13,13 +14,34 @@ class Scoreboard(Turtle):
         self.hideturtle()
         self.setposition(0, 270)
         self.color('white')
+        self.high_score = 0
+        self.load_score()
 
     def make_point(self):
         self.score += 1
 
     def print_scoreboard(self):
         self.clear()
-        return self.write(arg=f'Your Score : {self.score}', move=False, align=ALLIGN, font=FONT)
+        return self.write(arg=f'Your Score : {self.score}  High score: {self.high_score}', move=False, align=ALLIGN, font=FONT)
+
+    def reset(self):
+        if self.score > self.high_score:
+            self.high_score = self.score
+        self.score = 0
+        self.print_scoreboard()
+        self.save_score()
+
+    def load_score(self):
+        if not os.path.exists('score.txt'):
+            return
+        with open('score.txt', 'r') as f:
+            self.high_score = int(f.read())
+
+
+    def save_score(self):
+        x = self.high_score
+        with open('score.txt', 'w') as f:
+            f.write(str(x))
 
 
 class GameOver(Turtle):
