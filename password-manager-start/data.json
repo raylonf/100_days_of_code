@@ -1,10 +1,14 @@
 {
-    "dfas": {
-        "email": "fas",
-        "password": "XVFpCN-[83"
+    "gmail": {
+        "email": "raylonsilva42@gmail.com",
+        "password": "v^1@brNVPs2"
     },
-    "fas": {
-        "email": "fas",
-        "password": "$gL1se}lD0"
+    "iqoption": {
+        "email": "raylonsilva42@gmail.com",
+        "password": "f8%!7UpILq"
+    },
+    "pythonanywhere": {
+        "email": "raylon.f@hotmail.com",
+        "password": "b.%H45HSxxI"
     }
 }
