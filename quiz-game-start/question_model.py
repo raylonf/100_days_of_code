@@ -1,4 +1,4 @@
-from email.encoders import encode_quopri
+import html
 
 
 class QuizGameModel:
@@ -10,8 +10,9 @@ class QuizGameModel:
         
     def questions(self):
         
-        for e, c in enumerate(self.list):            
-            self.question.append(f'Q.{e+1}: {c["question"]}')
+        for e, c in enumerate(self.list):
+            q_text = html.unescape(c['question'])
+            self.question.append(f'Q.{e+1}: {q_text}')
             
         return self.question
             

@@ -41,7 +41,7 @@ import smtplib
 today = dt.datetime.now()
 weektoday = today.weekday()
 frase = []
-if weektoday == 1:
+if weektoday == 0:
     with open('quotes.txt', 'r') as file:
         frases = file.read().split('\n')
         frase = random.choice(frases)
@@ -52,4 +52,5 @@ if weektoday == 1:
     with smtplib.SMTP('smtp.gmail.com', 587) as connection:
         connection.starttls()
         connection.login(user=my_email, password=password)
-        connection.sendmail(from_addr=my_email, to_addrs='luanamoara@hotmail.com', msg=f'Subject:Motivational Message\n\n{frase}')
+        connection.sendmail(from_addr=my_email, to_addrs='raylon.f@hotmail.com', msg=f'Subject:Motivational Message\n\n{frase}')
+
